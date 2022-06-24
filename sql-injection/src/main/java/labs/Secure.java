@@ -84,6 +84,7 @@ public class Secure extends HttpServlet {
       
 				String fname = request.getParameter("fname"); 				     
 
+				// PreparedStatement 처리 방식으로 구현하여 안전한 SQL 인젝션 코딩 확인 
 				String sql = "select * from users where fname = ?";
 				PreparedStatement ps=con.prepareStatement(sql);
 				ps.setString(1,fname.toString()); 
